@@ -1,79 +1,89 @@
-MERN Project
-Giới thiệu
-Đây là một dự án mẫu sử dụng công nghệ MERN stack (MongoDB, Express.js, React, Node.js) để xây dựng một ứng dụng web hiện đại. Dự án này cung cấp một nền tảng cơ bản cho việc phát triển các ứng dụng full-stack, bao gồm giao diện người dùng (React), API backend (Express.js và Node.js), và cơ sở dữ liệu (MongoDB).
-Dự án này có thể được sử dụng như một điểm bắt đầu cho các ứng dụng như quản lý người dùng, blog, hoặc các ứng dụng CRUD cơ bản.
-Yêu cầu
-Để chạy dự án, bạn cần cài đặt các công cụ sau:
+# Dự án MERN
 
-Node.js: Phiên bản 14.x hoặc cao hơn
-MongoDB: Đảm bảo MongoDB được cài đặt cục bộ hoặc sử dụng MongoDB Atlas (dịch vụ đám mây)
-npm hoặc yarn: Quản lý gói phụ thuộc
-Trình duyệt web hiện đại (Chrome, Firefox, v.v.)
+## Giới thiệu
+Đây là một dự án full-stack sử dụng **MERN stack** (MongoDB, Express.js, React, Node.js). Dự án cung cấp một nền tảng cơ bản để xây dựng ứng dụng web, bao gồm giao diện người dùng (React) và API backend (Express.js, Node.js) kết nối với cơ sở dữ liệu MongoDB.
 
-Cài đặt
-1. Clone repository
-Clone dự án từ GitHub về máy của bạn:
+Ứng dụng này phù hợp cho các dự án như quản lý người dùng, blog, hoặc các ứng dụng CRUD.
+
+## Công nghệ sử dụng
+- **MongoDB**: Cơ sở dữ liệu NoSQL.
+- **Express.js**: Framework cho API backend.
+- **React**: Thư viện xây dựng giao diện người dùng.
+- **Node.js**: Môi trường runtime cho backend.
+
+## Yêu cầu
+- **Node.js**: Phiên bản 14.x hoặc cao hơn.
+- **MongoDB**: Cài đặt cục bộ hoặc sử dụng MongoDB Atlas.
+- **npm** hoặc **yarn**: Quản lý gói phụ thuộc.
+- Trình duyệt web (Chrome, Firefox, v.v.).
+
+## Cài đặt
+
+### 1. Clone repository
+```bash
 git clone https://github.com/your-username/your-repo.git
 cd your-repo
+```
 
-2. Cài đặt phụ thuộc
-Cài đặt các phụ thuộc cho cả backend và frontend:
-Backend
+### 2. Cài đặt phụ thuộc
+#### Backend
+```bash
 cd server
 npm install
+```
 
-Frontend
+#### Frontend
+```bash
 cd client
 npm install
+```
 
-3. Cấu hình biến môi trường
-Tạo file .env trong thư mục server và thêm các biến môi trường sau:
+### 3. Cấu hình biến môi trường
+Tạo file `.env` trong thư mục `server` với nội dung:
+```env
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
+```
+Thay `your_mongodb_connection_string` bằng chuỗi kết nối MongoDB (từ MongoDB Atlas hoặc cục bộ).
 
-Thay your_mongodb_connection_string bằng chuỗi kết nối MongoDB của bạn (từ MongoDB Atlas hoặc cục bộ).
-4. Chạy ứng dụng
-Chạy backend
-Từ thư mục server:
+### 4. Chạy dự án
+#### Backend
+```bash
+cd server
 npm start
+```
+Backend chạy trên `http://localhost:5000`.
 
-Backend sẽ chạy trên http://localhost:5000 (hoặc cổng được chỉ định trong .env).
-Chạy frontend
-Từ thư mục client:
+#### Frontend
+```bash
+cd client
 npm start
+```
+Frontend chạy trên `http://localhost:3000` và tự động mở trong trình duyệt.
 
-Frontend sẽ chạy trên http://localhost:3000 và tự động mở trong trình duyệt.
-5. Sử dụng ứng dụng
-
-Mở trình duyệt và truy cập http://localhost:3000 để sử dụng giao diện React.
-API backend có thể được gọi qua các endpoint như http://localhost:5000/api.
-
-Cấu trúc dự án
+## Cấu trúc thư mục
+```plaintext
 your-repo/
 ├── client/                 # Frontend (React)
-│   ├── public/             # Các file tĩnh
+│   ├── public/             # File tĩnh
 │   ├── src/                # Mã nguồn React
-│   └── package.json        # Phụ thuộc frontend
+│   └── package.json
 ├── server/                 # Backend (Node.js + Express)
 │   ├── routes/             # Định tuyến API
 │   ├── models/             # Mô hình MongoDB
-│   ├── controllers/        # Logic xử lý API
-│   └── package.json        # Phụ thuộc backend
-├── .gitignore              # Các file/thư mục bị bỏ qua bởi Git
-└── README.md               # File này
+│   ├── controllers/        # Logic xử lý
+│   └── package.json
+├── .gitignore
+└── README.md
+```
 
-Công nghệ sử dụng
+## Sử dụng
+- Truy cập `http://localhost:3000` để sử dụng giao diện React.
+- Gọi API tại `http://localhost:5000/api` (xem tài liệu API trong `server/routes`).
 
-MongoDB: Cơ sở dữ liệu NoSQL để lưu trữ dữ liệu.
-Express.js: Framework Node.js để xây dựng API.
-React: Thư viện JavaScript để xây dựng giao diện người dùng.
-Node.js: Môi trường runtime cho backend.
+## Đóng góp
+- Mở issue trên GitHub để báo lỗi hoặc đề xuất tính năng.
+- Gửi pull request với các thay đổi của bạn.
 
-Góp ý
-Nếu bạn có bất kỳ câu hỏi hoặc muốn đóng góp cho dự án, hãy:
-
-Mở một issue trên GitHub.
-Gửi pull request với các thay đổi của bạn.
-
-Giấy phép
-Dự án này được cấp phép theo MIT License.
+## Giấy phép
+Dự án sử dụng [MIT License](LICENSE).
